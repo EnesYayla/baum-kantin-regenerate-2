@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body{
+    background-image: url("../../../assets/images/background.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    
+    
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background: #fff;
+    max-width: 450px;
+    width: 100%;
+    padding: 36px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 36px #000;
+}
+
+.container .logo img{
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    left: 73%;
+    top: 5px;
+}
+
+.container form .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    text-shadow: 0 0 10px #bbb;
+}
+
+.container form .input-box{
+    width: 100%;
+    height: 45px;
+    margin-top: 30px;
+    position: relative;
+}
+.container form .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+
+.container form .underline::before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    left: 0;
+    bottom: 0;
+}
+
+.container form .underline::after{
+    position: absolute;
+    content:"";
+    height: 2px;
+    width:100%;
+    left: 0%;
+    bottom: 0;
+    background: red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+
+}
+
+.container form .input-box input:focus ~ .underline::after,
+.container form .input-box input:valid ~ .underline::after{
+    transform: scaleX(1);
+    transform-origin: left;
+
+}
+
+.container form .button{
+    margin: 40px 0 20px 0;
+}
+.container form .input-box input[type="submit"]{
+    font-size: 17px;
+    color:#fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, red, #600);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.container form .input-box input[type="submit"]:hover{
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.15);
+    color: red;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.container .text{
+    font-size: 14px;
+    text-align: center;
+}
+
+.container .google a{
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 20px;
+    color: #fff;
+    line-height: 45px;
+    border-radius: 5px;
+
+}
+
+.container .google a{
+    background-image: linear-gradient(45deg, #a7b, #303);
+    margin: 20px 0 15px 0;
+}
+
+.container .google a:hover{
+    background-image: linear-gradient(45deg, #b9f, #304);
+    transition: all 0.3s ease;
+}
+
+.container .google i{
+    font-size: 18px;
+    padding-right: 22px;
+}
+footer{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    font-family: sans-serif;
+    background-image: linear-gradient(45deg, #000, #002);
+    box-shadow: 0 0 32px #000;
+    bottom: 0px;
+    font-size: 16px;
+    padding: 16px;
+    color: #ddd;
+}
+
+@media screen and (max-width: 1600px) {
+    .container{
+        max-width: 300px;
+        width: 100%;
+        padding: 18px 28px;
+    }
+    
+    .container .logo img{
+        width: 72px;
+        height: 96px;
+        left: 73%;
+    }
+    
+    .container form .title{
+        font-size: 20px;
+        margin: 16px 0 8px 0;
+    }
+    
+    .container form .input-box{
+        width: 100%;
+        height: 32px;
+        margin-top: 28px;
+    }
+    .container form .input-box input{
+        font-size: 10px;
+    }
+    .container .text{
+        font-size: 9px;
+    }
+
+    .container .google a{
+        height: 32px;
+        font-size: 9px;
+        margin: 12px 0;
+        padding-left: 12px;
+        line-height: 32px;
+    }
+    footer{
+        font-size: 12px;
+        padding: 12px;
+    }
+    .container form .input-box input[type="submit"]{
+        font-size: 12px;
+    }
+    .container .google i{
+        font-size: 16px;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .container{ 
+        max-width: 100%;
+    }
+    footer {
+        visibility: hidden;
+    }
+
+}

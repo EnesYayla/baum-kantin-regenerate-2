@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF- 8" />
+    <meta name="viewport" content="width=device-width,inital-scale=1.0" />
+    <title>Giriş Sayfası</title>
+    <link rel="stylesheet" href="./login.component.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="../../../assets/images/baum-logo.jpeg" alt="LOGO" />
+      </div>
+
+      <form class="form-signin" (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
+        <div class="title">GİRİŞ</div>
+        <div class="input-box">
+          <input
+            type="tc"
+            name="tc"
+            placeholder="T.C. Kimlik Numaranızı giriniz."
+            required
+            minlength="11"
+            maxlength="11"
+            class="form-control" ngModel
+          />
+          <div class="underline"></div>
+        </div>
+
+        <div class="input-box">
+          <input type="password" name="password" placeholder="Şifrenizi giriniz." required class="form-control" ngModel/>
+          <div class="underline"></div>
+        </div>
+
+        <div class="input-box button">
+          <input type="submit" value="Giriş Yap" />
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="isFormInvalid">
+          Lütfen tüm alanları doldurunuz
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="areCredentialsInvalid">
+          Geçersiz T.C. veya şifre
+        </div>
+      </form>
+
+      <div class="text">
+        veya Google hesabınızı kullanarak da giriş yapabilirsiniz.
+      </div>
+
+      <!--Google Hesabı Butonu-->
+
+      <div class="google">
+        <a href="#"
+          ><i class="fa-brands fa-google-plus"></i>Google ile giriş yapmak için
+          tıklayın.</a
+        >
+      </div>
+    </div> 
+    <footer>&copy; 2022 Anadolu Üniversitesi BAUM - Tüm hakları saklıdır.</footer>
+  </body>
+ 
+</html>

@@ -1,0 +1,211 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+.container {
+	position: relative;
+	margin-top: 100px;
+}
+.container img {
+	display: block;
+	width: 100%;
+}
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0 2%;
+	height: 72px;
+	background-image: linear-gradient(45deg, #d33, #900);
+    box-shadow: 0 4px 16px #000;
+}
+nav .logo {
+	float: left;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	padding-right: 15px;
+}
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 14px;
+}
+nav .links li {
+	list-style: none;
+    color: #fff;
+    padding: 12px 8px;
+	margin: 24px;
+	display: inline-block;
+    border-radius: 20px;
+	box-sizing: border-box;
+}
+nav .links .user i, nav .links .admin i {
+    color: #fff;
+    margin-right: 8px;
+}
+nav .links .userLogout i {
+    color: #000;
+    margin-right: 8px;
+}
+
+nav .links .userLogout i {
+    margin-right: 8px;
+}
+
+nav .links .admin, nav .links .user {
+    text-shadow: 1px 1px 8px #000;
+}
+nav .links .userLogout {
+    background-image: linear-gradient(45deg, #fff, #bbb);
+    color: #000;
+}
+nav .links .user:hover, nav .links .admin:hover {
+    cursor: pointer;
+	text-shadow:  0 0 24px #fff;
+    /* box-shadow: 0 0 8px #000;
+    background-image: linear-gradient(45deg, #f33, #600);
+    transition: all .1s ease-in-out; */
+}
+
+nav .links .userLogout:hover {
+    cursor: pointer;
+	text-shadow:  0 0 24px #fff;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 1800px) {
+	nav .links li {
+		margin: 16px;
+		padding: 6px 4px;
+		font-size: 14px;
+	}
+	nav .logo img {
+		height: 20px;
+	}
+	nav {
+		height: 48px;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	nav .links li {
+		margin: 14px;
+		padding: 4px 4px;
+		font-size: 12px;
+	}
+	nav .logo img {
+		height: 16px;
+	}
+	nav {
+		height: 36px;
+	}
+}
+@media screen and (max-width: 1300px) {
+	nav .links li {
+		margin: 12px;
+		font-size: 10px;
+	}
+	nav .logo img {
+		height: 14px;
+	}
+	nav {
+		height: 32px;
+	}
+}
+@media screen and (max-width: 1110px) {
+	nav .links li {
+		margin: 8px;
+		font-size: 8px;
+	}
+	nav .logo img {
+		height: 12px;
+	}
+	nav {
+		height: 28px;
+	}
+}
+
+
+
+@media screen and (max-width: 992px) {
+	nav .logo {
+		float: none;
+		width: auto;
+
+		justify-content: center;
+	}
+	nav .links {
+		align-items: flex-end;
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 72px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+		
+	}
+		/* SandviÃ§ menÃ¼ problemi (telefonu boyutunda) */
+	nav .links li {
+		padding: 4px 12px;
+		font-size: 16px;
+	}
+	nav :checked ~ .links {
+		bottom: 200px;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
+.pointer{
+	cursor: pointer;
+}
+.img-fluid{
+	height: 90px;
+	width: 90px;
+}

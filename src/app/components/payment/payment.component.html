@@ -1,0 +1,18 @@
+<div
+  class="card"
+  style="width: 18rem"
+  *ngIf="authenticationService.isAuthenticated"
+>
+  <div class="card-body">
+    <h5 class="card-title">Ödeme Alanı</h5>
+    <p class="card-text">Ödemenizi Yapınız</p>
+    <button class="btn btn-primary" (click)="makePayment(10)">Öde</button>
+  </div>
+</div>
+
+<div *ngIf="success">
+  <h1>Ödeme Başarılı</h1>
+</div>
+<div *ngIf="failure">
+  <h1>Ödeme Başarısız</h1>
+</div>
